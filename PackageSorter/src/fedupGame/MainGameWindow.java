@@ -1,5 +1,15 @@
 package fedupGame;
 
+/*********************************************************
+ * This class controls the main game window.
+ * 
+ * @author Max Cardillo 
+ * 
+ * Some of the code was written by Laura Riffo then implemented
+ * by Max Cardillo.
+ * 
+ * Briana Moore
+ **********************************************************/
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -229,7 +239,7 @@ public class MainGameWindow {
 		frame.add(panelWest, BorderLayout.LINE_START);
 		
 		try {
-			BufferedImage boxPic = ImageIO.read(new File("C:/Users/Josh/git/FEDUP/PackageSorter/package2.png"));
+			BufferedImage boxPic = ImageIO.read(new File("package2.png"));
 			ImageIcon pkgPic = new ImageIcon(boxPic);
 			Image pic = pkgPic.getImage();
 			Image newPic = pic.getScaledInstance(320, 220, java.awt.Image.SCALE_SMOOTH);

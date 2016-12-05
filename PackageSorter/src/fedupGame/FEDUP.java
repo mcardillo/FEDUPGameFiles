@@ -1,5 +1,13 @@
 package fedupGame;
 
+/*********************************************************
+ * This is the main driver for the game.
+ * 
+ * @author Max Cardillo
+ * 
+ * Briana Moore, Laura Riffo 
+ *
+ **********************************************************/
 public class FEDUP {
 	public static void main(String[] args) throws Exception {
 		GameV2 fedup = new GameV2();
@@ -12,22 +20,3 @@ public class FEDUP {
 		finale.end();
 	}
 }
-
-//system.getProperty(userdir);
-//JFileChooser?
-
-/***********************************
- *           TO DO LIST            *
- *                                 *
- *           1. Images             *
- *    2. Finish adjusting text     *
- *       -ManualWindow             *
- *       -MainGameWindow           *
- *       -Boxes descriptors        *
- *       -Employee Titles          *
- *     3. Adjust window sizes      *
- *       -MainGameWindow           *
- *       -NewPlayerScreen          *
- *                                 *
- *                                 *
- ***********************************/

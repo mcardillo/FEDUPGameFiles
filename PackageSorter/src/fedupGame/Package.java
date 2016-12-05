@@ -1,5 +1,15 @@
 package fedupGame;
 
+/*********************************************************
+ * This class creates a package. 
+ * 
+ * @author Briana Moore 
+ * 
+ * Max Cardillo implemented the getSender, setEgg, and getEgg
+ * methods 
+ * 
+ * Laura Riffo
+ **********************************************************/
 public class Package {
 	private int weight;
 	private String postage;

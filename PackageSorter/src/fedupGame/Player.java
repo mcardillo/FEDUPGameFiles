@@ -1,5 +1,15 @@
 package fedupGame;
 
+/*********************************************************
+ * This is the player class which contains the player's 
+ * name, points, and citations.
+ * 
+ * @author Wyatt however Laura Riffo made changes to some of 
+ * the methods
+ * 
+ * Briana Moore and Max Cardillo
+ *
+ **********************************************************/
 import java.util.Scanner;
 import java.io.File;
 import java.io.*;

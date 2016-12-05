@@ -1,5 +1,13 @@
 package fedupGame;
 
+/*********************************************************
+ * This class creates the package stack.
+ * 
+ * @author Max Cardillo 
+ * 
+ * 
+ * Briana Moore and Laura Riffo
+ **********************************************************/
 import java.util.NoSuchElementException;
 
 public class PackageStack <T>{

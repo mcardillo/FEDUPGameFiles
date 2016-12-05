@@ -1,5 +1,13 @@
 package fedupGame;
 
+/*********************************************************
+ * This class controls the main game window.
+ * 
+ * @author Max Cardillo 
+ * 
+ * 
+ * Briana Moore and Laura Riffo wrote the text.
+ **********************************************************/
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;

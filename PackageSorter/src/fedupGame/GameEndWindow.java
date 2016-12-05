@@ -1,5 +1,14 @@
 package fedupGame;
 
+/*********************************************************
+ * This class controls the main game window.
+ * 
+ * @author Max Cardillo 
+ * 
+ * The Easter Egg code was completed by Laura Riffo.
+ * 
+ * Briana Moore and Laura Riffo wrote the text.
+ **********************************************************/
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;

@@ -1,5 +1,16 @@
 package fedupGame;
 
+/*********************************************************
+ * This class creates the manual.
+ * 
+ * @author Max Cardillo 
+ * 
+ * 
+ * Briana Moore wrote the manual text.
+ * (retrieved from http://www.nccu.edu/health-safety/emergency/suspiciousmail.cfm)
+ * 
+ * Laura Riffo
+ **********************************************************/
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
 
@@ -75,7 +86,6 @@ public class ManuelWindow {
 						"      oTitles but no names\n" +
 						"      oNo return address\n" +
 						"      oProtruding wires or foil\n" +
-//(retrieved from http://www.nccu.edu/health-safety/emergency/suspiciousmail.cfm) 
 						"	•Possible indication of a poisonous powder such as Anthrax.\n" +
 						"	•The labeling is very suspicious.\n" +
 						"	•The package indicates that it is possibly flammable.");

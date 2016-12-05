@@ -1,5 +1,18 @@
 package fedupGame;
 
+/*********************************************************
+ * This class controls the playing of the game.
+ * 
+ * @author most of the code was written by Laura Riffo then
+ * implemented into the Graphical User Interface by Max Cardillo
+ * 
+ * Briana Moore wrote the packageElms method, all of the 
+ * getConnection methods as well as the saveGame method. 
+ * 
+ * Briana Moore also created the database as well as all of the 
+ * information inside the database as well (Boxes.accdb).
+ * 
+ **********************************************************/
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;

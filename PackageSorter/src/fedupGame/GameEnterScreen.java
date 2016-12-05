@@ -1,5 +1,15 @@
 package fedupGame;
 
+/*********************************************************
+ * This creates the first screen that appears when the game
+ * is played.
+ * 
+ * @author Max Cardillo
+ * 
+ * Briana Moore wrote the code for the load game method
+ * Briana Moore and Laura Riffo wrote the text to appear. 
+ *
+ **********************************************************/
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +25,6 @@ import java.io.ObjectInputStream;
 public class GameEnterScreen {
 
 	private JFrame frame;
-	private JLabel label;
 	private JTextArea label1;
 	private JTextArea titleLabel;
 	private JPanel panelSouth;
@@ -87,18 +96,12 @@ public class GameEnterScreen {
 				" the postage on the package, and finally a brief description describing characteristics of the package.\n" + 
 				" The guidelines can be found in the manual button on the screen \nand will be available throughout the game. ");
 		label1.setMargin(new Insets(10, 10, 10, 10));
-		label = new JLabel("<html>Welcome to FEDUP!<br> You are a worker at a local FEDUP delivery office.<br>" +
-				"You are in charge of checking each package and discerning<br> whether it is safe to deliver.<br>" +
-				"If it is safe, then click SHIP.<br> If not, click DON'T SHIP.<br> Your points will be based on the choices" +
-				" you make:<br> 1 pt for each correct decision,<br> 1 citation for each wrong decision.<br> But be aware," +
-				" if your ship something dangerous, bad things could happen.<br> Please select whether to load a game or start anew.</html>");
-		  
+		
 		 
 		label1.setLineWrap(true);
 		label1.setEditable(false);
 		label1.setFont(new Font("Times New Roman", 1, 23));
 		label1.setColumns(45);
-		label.setForeground(Color.WHITE);
 		
 		panelCenter.setBackground(new Color(252, 161, 118));
 		label1.setBackground(new Color(252, 161, 118));
@@ -114,7 +117,6 @@ public class GameEnterScreen {
 				loadGame();
 				choice = false;
 				makeInvis();
-				//System.out.println(System.getProperty("user.dir"));
 			}
 		});
 		panelSouth.add(newGameButton);
@@ -133,7 +135,7 @@ public class GameEnterScreen {
 		panelSouth.setBackground(new Color(252, 161, 118));
 		
 		try {
-			BufferedImage truckPic = ImageIO.read(new File("C:/Users/Josh/git/FEDUP/PackageSorter/truck.png"));
+			BufferedImage truckPic = ImageIO.read(new File("truck.png"));
 			ImageIcon trkPic = new ImageIcon(truckPic);
 			Image pic = trkPic.getImage();
 			Image newPic = pic.getScaledInstance(220,170, java.awt.Image.SCALE_SMOOTH);
@@ -184,8 +186,3 @@ public class GameEnterScreen {
 	}
 
 }
-
-
-/*public class InterestingEvent implements EventHandler<ActionEvent>{
-	
-}*/
