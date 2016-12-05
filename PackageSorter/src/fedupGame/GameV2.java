@@ -56,6 +56,12 @@ public class GameV2 implements CallbackListener{
 		else{
 			player = begin.getLoad();
 		}
+		
+		try{
+			player.getLevel();
+		}catch (Exception e){
+			player = new Player("JoeShmoe");
+		}
 			
 		for(int i = 0; i < 15; i++){
 	    	
@@ -92,7 +98,7 @@ public class GameV2 implements CallbackListener{
 			playing.makeInvis();
 		}
 		
-		//System.out.println(packages.onStack());
+
 		if(player.getPoints() >= 10 && player.getCitations() < 5){
 			
 			for(int i = 0; i < 20; i++){
@@ -117,9 +123,7 @@ public class GameV2 implements CallbackListener{
 				} catch(Exception e) {
 					e.printStackTrace();
 				}
-				//packages = new PackageStack<Package>();
 				packages.push(packageElms(resultWeight, resultPostage, resultDescriptor));
-				//System.out.println(packages.onStack());
 			}
 			player.incLevel();
 			player.accumulate();
@@ -129,14 +133,10 @@ public class GameV2 implements CallbackListener{
 		}
 		
 		
-		//System.out.println(packages.onStack());
-		//System.out.println(player.getPoints());
-		//System.out.println(eeAppear);
 		if(player.getLevel() == 2){
 			playing2 = new MainGameWindow(this);
 			while(player.getPoints() <= 14 && player.getCitations() < 5 && !eeAppear){
 				setEggEnd(playing2.eeAppears(), playing2.eeChoosen());
-				//System.out.println(player.getPoints());
 				System.out.flush();
 			}
 			playing2.makeInvis();
@@ -167,7 +167,6 @@ public class GameV2 implements CallbackListener{
 				} catch(Exception e) {
 					e.printStackTrace();
 				}
-				//packages = new PackageStack<Package>();
 				packages.push(packageElms(resultWeight, resultPostage, resultDescriptor));
 			}
 			player.incLevel();
@@ -187,24 +186,6 @@ public class GameV2 implements CallbackListener{
 			playing3.makeInvis();
 		}
 		
-		/*while(notWin && notLose){
-			
-			//GameEnterScreen begin = new GameEnterScreen();
-			/*while(choiceMade){
-				choiceMade = begin.getChoice();
-			}
-			//begin.closeWindow();
-			choiceMade = false;
-			MainGameWindow playing = new MainGameWindow(this);
-			/*while(packages.hasNext()){
-				while(choiceMade){
-					playing.feedPackage(packages.pop());
-					System.out.println(1);
-				}
-			}
-			
-		}*/
-		
 		if(player.getCitations() > 4)
 			return false;
 		else if(player.getLevel() == 3 && player.getPoints() > 19)
@@ -219,12 +200,11 @@ public class GameV2 implements CallbackListener{
 		
 		try{
 			//Use local location of Boxes database
-			String url = "jdbc:ucanaccess://Boxes (1).accdb";  //Macs:?
+			String url = "jdbc:ucanaccess://Boxes (1).accdb";
 			String username = "";
 			String password = "";
 			
 			Connection conn = DriverManager.getConnection(url, username, password);
-			//System.out.println("Connected");
 			Statement s = conn.createStatement();
 	        rs = s.executeQuery("SELECT Weight FROM Weight");
 	
@@ -248,7 +228,6 @@ public class GameV2 implements CallbackListener{
 			String password = "";
 			
 			Connection conn = DriverManager.getConnection(url, username, password);
-			//System.out.println("Connected");
 			Statement s = conn.createStatement();
 	        rs = s.executeQuery("SELECT Postage FROM Postage");
 
@@ -269,7 +248,6 @@ public class GameV2 implements CallbackListener{
 			String password = "";
 			
 			Connection conn = DriverManager.getConnection(url, username, password);
-			//System.out.println("Connected");
 			Statement s = conn.createStatement();
 	        rs = s.executeQuery("SELECT Descriptor FROM Descriptor");
 	
@@ -352,9 +330,6 @@ public class GameV2 implements CallbackListener{
 			}
 	      
 			package1 = new Package(pWeight, pPostage, pDesc, pPass);
-			//System.out.println(package1.getWeight());
-			//System.out.println(package1.getPostage());
-			//System.out.println(package1.getStatus());
 			weight = null;
 			postage = null;
 			descript = null;

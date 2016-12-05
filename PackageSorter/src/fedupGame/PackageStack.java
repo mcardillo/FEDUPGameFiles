@@ -34,14 +34,12 @@ public class PackageStack <T>{
 			elements = newArray;
 		}
 		
-		//System.out.println(numElms);
 		elements[numElms++] = e;
 		return true;
 	}
 	
 	@SuppressWarnings("unchecked")
 	public T pop() throws NoSuchElementException{
-		//System.out.println(numElms);
 		if(numElms == 0)
 			throw new NoSuchElementException();
 		return (T) elements[--numElms];

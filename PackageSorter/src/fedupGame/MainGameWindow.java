@@ -263,15 +263,11 @@ public class MainGameWindow {
 		panelWest.removeAll();
 		
 		points.setText("Current points: " + user.getPoints());
-		//points.setEditable(false);
-		//points.setFont(new Font("Times New Roman", 1, 20));
-		//points.setBackground(new Color(252, 161, 118));
+
 		panelWest.add(points);
 		
 		citations.setText("Current citations: " + user.getCitations());
-		//citations.setEditable(false);
-		//citations.setFont(new Font("Times New Roman", 1, 20));
-		//citations.setBackground(new Color(252, 161, 118));
+
 		panelWest.add(citations);
 		
 		panelWest.repaint();
@@ -281,16 +277,10 @@ public class MainGameWindow {
 		if(p.getEgg()){
 			packDesc.setText("The package weighs " + p.getWeight() + " lbs.\nThe package has " + p.getPostage() + " postage.\n" 
 				+ "The package is " + p.getDescription() + ".\nThe return address is the " + p.getSender() + ".");
-			//packDesc.setEditable(false);
-			//packDesc.setFont(new Font("Times New Roman", 1, 30));
-			//packDesc.setBackground(new Color(252, 161, 118));
 		}
 		else{
 			packDesc.setText("The package weighs " + p.getWeight() + " lbs.\nThe package has " + p.getPostage() + " postage.\n" 
 					+ "The package is " + p.getDescription() + ".");
-			//packDesc.setEditable(false);
-			//packDesc.setFont(new Font("Times New Roman", 1, 30));
-			//packDesc.setBackground(new Color(252, 161, 118));
 		}
 		panelCenter.add(packDesc);
 		
